@@ -1,5 +1,5 @@
-const FidgePage = () => {
+const FridgePage = () => {
   return <div>page</div>;
 };
 
-export default FidgePage;
+export default FridgePage;
