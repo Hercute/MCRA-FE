@@ -1,5 +1,8 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
+import { ToastContainer } from 'react-toastify';
+import QueryProvider from './provider';
+import 'react-toastify/dist/ReactToastify.css';
 import RecoilRootWrapper from './RecoilRootWrapper';
 
 import type { Metadata } from 'next';
@@ -19,7 +22,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <RecoilRootWrapper>{children}</RecoilRootWrapper>
+        <QueryProvider>
+          <RecoilRootWrapper>
+            <ToastContainer />
+            {children}
+          </RecoilRootWrapper>
+        </QueryProvider>
       </body>
     </html>
   );
