@@ -1,6 +1,6 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
-import RecoilRootWrapper from '@/components/layout/RecoilRootWrapper';
+import RecoilRootWrapper from './RecoilRootWrapper';
 
 import type { Metadata } from 'next';
 
