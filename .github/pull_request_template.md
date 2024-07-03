@@ -12,7 +12,7 @@
 ```
 ```
 
-## 🚨 TroubleShotting
+## 🚨 TroubleShooting
 <!-- TroubleShotting이 있었다면 이야기 해주세요! -->
 ```
 ```
