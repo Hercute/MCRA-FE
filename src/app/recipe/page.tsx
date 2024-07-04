@@ -9,7 +9,7 @@ const RecipePage = () => {
     <>
       {/* <RecommendMenuList recipes={recipes} /> */}
       <AuthRecipeList recipes={recipes} />
-      {/* <RecipeList recipes={recipes} /> */}
+      <RecipeList recipes={recipes} />
     </>
   );
 };
