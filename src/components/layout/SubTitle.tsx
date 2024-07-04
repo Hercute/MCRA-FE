@@ -19,7 +19,7 @@ const SubTitle: React.FC<SubTitleProps> = ({ title, explanation, showButton, ico
       </h2>
       <span className="subExplanation">{explanation}</span>
       {showButton && href && (
-        <Link href={href}>
+        <Link href={href} className="subTitle_Btn">
           <button type="button">더보기</button>
         </Link>
       )}

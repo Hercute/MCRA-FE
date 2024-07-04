@@ -3,8 +3,10 @@ import React from 'react';
 import { Recipe } from '../data/recipeDummyData';
 import SubTitle from '@/components/layout/SubTitle';
 import { FaRegThumbsUp } from 'react-icons/fa';
+import RecipeItem from './RecipeItem';
 
 import './AuthRecipeList.css';
+import './RecipeItem.css';
 
 type AuthRecipeListProps = {
   recipes: Recipe[];
@@ -20,14 +22,11 @@ const AuthRecipeList: React.FC<AuthRecipeListProps> = ({ recipes }) => {
         icon={FaRegThumbsUp}
         href={`/recipe/detail-page}`}
       />
-      {AuthRecipes.map((recipe) => (
-        <>
-          <div key={recipe.id}>
-            <p>{recipe.name}</p>
-            <p>{recipe.likeCounts}</p>
-          </div>
-        </>
-      ))}
+      <div className="recipeListDiv">
+        {AuthRecipes.map((recipe) => (
+          <RecipeItem key={recipe.id} recipe={recipe} />
+        ))}
+      </div>
     </div>
   );
 };
