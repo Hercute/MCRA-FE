@@ -1,0 +1,13 @@
+.recipeListDiv {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.recipeItemDiv .recipeImgBox {
+  width: 10rem;
+  height: 10rem;
+  background-color: #fff0d2;
+}
+.likedDiv {
+  display: flex;
+}
