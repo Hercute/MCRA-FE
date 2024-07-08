@@ -1,0 +1,22 @@
+.recipeSection {
+  background-color: aliceblue;
+  border-bottom: 1px solid #704718;
+}
+.uploadDiv {
+  display: flex;
+  align-items: center;
+}
+.uploadDiv span {
+  font-size: 27px;
+  margin: 0 0.5rem;
+}
+.uploadDiv .categorySelect {
+  /* Rectangle 364 */
+  width: 7.5rem;
+  height: 1.5rem;
+  background: #ffdd9b;
+  border-radius: 4px;
+}
+.uploadInput {
+  background-color: #fff0d2;
+}

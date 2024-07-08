@@ -4,7 +4,7 @@ import { IconType } from 'react-icons';
 
 type SubTitleProps = {
   title: string;
-  explanation: string;
+  explanation?: string;
   showButton?: boolean;
   icon: IconType;
   href?: string;

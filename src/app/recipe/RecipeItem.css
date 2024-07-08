@@ -7,6 +7,7 @@
   width: 10rem;
   height: 10rem;
   background-color: #fff0d2;
+  border-radius: 1rem;
 }
 .likedDiv {
   display: flex;
