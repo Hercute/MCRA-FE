@@ -1,5 +1,13 @@
+import RecipeInfo from './RecipeInfo';
+import Ingredient from './Ingredient';
+
 const RecipeDetailPage = () => {
-  return <div>page</div>;
+  return (
+    <>
+      <RecipeInfo />
+      <Ingredient />
+    </>
+  );
 };
 
 export default RecipeDetailPage;
