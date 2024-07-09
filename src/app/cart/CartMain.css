@@ -1,0 +1,36 @@
+.cartMainDiv {
+  width: 375px;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.cartMainTitle {
+  color: #704718;
+  margin: 20px;
+  font-size: 16px;
+  /* font-weight: bold; */
+}
+
+.cartDetailDiv {
+  background-color: #ffefd1;
+  border-radius: 16px;
+  padding: 0 8px;
+}
+
+.cartDetailLinkDiv {
+  background-color: white;
+  border: 1px solid #ffa944;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cartPlusLink {
+  color: #704718;
+}
+
+.cartPlusIcon {
+  font-size: 80px;
+}

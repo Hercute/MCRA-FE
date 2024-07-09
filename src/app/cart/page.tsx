@@ -1,5 +1,11 @@
+import CartMain from './CartMain';
+
 const CartPage = () => {
-  return <div></div>;
+  return (
+    <>
+      <CartMain />
+    </>
+  );
 };
 
 export default CartPage;
