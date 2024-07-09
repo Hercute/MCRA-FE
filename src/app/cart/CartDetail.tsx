@@ -4,16 +4,18 @@ import React, { useState } from 'react';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { RiCheckboxBlankCircleFill } from 'react-icons/ri';
 import { RiCheckboxBlankCircleLine } from 'react-icons/ri';
+import CartEventBtn from './CartEventBtn';
+import { toast } from 'react-toastify';
 
 const CartDetail = () => {
   const [checkEvent, setCheckEvent] = useState(false);
   const [checkItems, setCheckItems] = useState([]);
+  const [cartModal, setCartModal] = useState(false);
+  const [cartKeep, setCartKeep] = useState('');
 
-  const cartNum = [
-    { title: '사과', check: false },
-    { title: '딸기', check: false },
-    { title: '수박', check: false }
-  ];
+  const cartNum = [{ title: '사과' }, { title: '딸기' }, { title: '수박' }];
+
+  const cartEventBtnArray = [{ title: '실온' }, { title: '냉장' }, { title: '냉동' }, { title: '삭제' }];
   const cartZero = 0;
 
   const cartCheckEvent = () => {
@@ -41,6 +43,19 @@ const CartDetail = () => {
       cartNum.forEach((prev) => idArray.push(prev.title));
       setCheckItems(idArray);
     }
+  };
+
+  const cartModalOnBtn = (title) => {
+    if (checkItems.length === 0) {
+      toast.warning('선택된 재료가 없어요!');
+      return false;
+    }
+    setCartModal(true);
+    setCartKeep(title);
+  };
+
+  const cartModalCancelBtn = () => {
+    setCartModal(false);
   };
 
   console.log(checkItems);
@@ -76,9 +91,21 @@ const CartDetail = () => {
               </div>
             );
           })}
-          <Link href="/cart/plus">
-            <button type="button">장바구니에 재료 추가하기</button>
-          </Link>
+          {checkEvent ? (
+            <div className="cartEventBtnDiv">
+              {cartEventBtnArray.map((item) => {
+                return (
+                  <div>
+                    <button onClick={() => cartModalOnBtn(item.title)}>{item.title}</button>
+                  </div>
+                );
+              })}
+            </div>
+          ) : (
+            <Link href="/cart/plus">
+              <button type="button">장바구니에 재료 추가하기</button>
+            </Link>
+          )}
         </div>
       ) : (
         <>
@@ -90,6 +117,17 @@ const CartDetail = () => {
           </div>
           <p>장바구니에 재료가 없습니다.</p>
         </>
+      )}
+      {cartModal && (
+        <div className="cartModalDiv">
+          <div className="cartModalStyle">
+            <h3>{cartKeep}에 보관할까요?</h3>
+            <div>
+              <button onClick={cartModalCancelBtn}>취소</button>
+              <button>확인</button>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );
