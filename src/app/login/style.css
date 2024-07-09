@@ -1,0 +1,11 @@
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap: 20vh;
+}
+
+.btnSection {
+  display: flex;
+  flex-direction: column;
+}
