@@ -34,3 +34,7 @@
 .cartPlusIcon {
   font-size: 80px;
 }
+
+.hidden-checkbox {
+  display: none;
+}
