@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import './style.css';
 
 const LoginPage = () => {
@@ -8,7 +9,9 @@ const LoginPage = () => {
       <section className="btnSection">
         <button className="continueBtn">계속</button>
         <button className="socialLoginBtn">구글로 로그인</button>
-        <h5 className="toSignUpPage">회원가입</h5>
+        <Link href="/signup">
+          <h5 className="toSignUpPage">회원가입</h5>
+        </Link>
       </section>
     </form>
   );
