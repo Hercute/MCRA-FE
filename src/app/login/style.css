@@ -1,8 +1,16 @@
+.testLogo {
+  width: 200px;
+  height: 200px;
+  background-color: #ffdd9b;
+  border-radius: 70px;
+  text-align: center;
+}
+
 .loginForm {
   display: flex;
   flex-direction: column;
   place-items: center;
-  gap: 20vh;
+  gap: 15vh;
 }
 
 .emailInput {

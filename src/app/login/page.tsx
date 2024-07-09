@@ -3,7 +3,7 @@ import './style.css';
 const LoginPage = () => {
   return (
     <form action="" className="loginForm">
-      <div>logo</div>
+      <div className="testLogo">logo</div>
       <input type="text" className="emailInput" />
       <section className="btnSection">
         <button className="continueBtn">계속</button>
