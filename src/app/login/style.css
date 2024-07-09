@@ -5,7 +5,28 @@
   gap: 20vh;
 }
 
+.emailInput {
+  height: 4vh;
+  border: 1px solid #ffa944;
+  border-radius: 10px;
+}
+
 .btnSection {
   display: flex;
   flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+
+.btnSection button {
+  height: 4vh;
+  border-radius: 10px;
+}
+
+.continueBtn {
+  background-color: #ffa944;
+}
+
+.socialLoginBtn {
+  border: 1px solid #ffa944;
 }

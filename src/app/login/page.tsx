@@ -4,11 +4,11 @@ const LoginPage = () => {
   return (
     <form action="" className="loginForm">
       <div>logo</div>
-      <input type="text" />
+      <input type="text" className="emailInput" />
       <section className="btnSection">
-        <button>계속</button>
-        <button>구글로 로그인</button>
-        <button>회원가입</button>
+        <button className="continueBtn">계속</button>
+        <button className="socialLoginBtn">구글로 로그인</button>
+        <h5 className="toSignUpPage">회원가입</h5>
       </section>
     </form>
   );
