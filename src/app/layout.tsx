@@ -4,6 +4,7 @@ import { ToastContainer } from 'react-toastify';
 import QueryProvider from './provider';
 import 'react-toastify/dist/ReactToastify.css';
 import RecoilRootWrapper from './RecoilRootWrapper';
+import Menu from '@/components/layout/Menu';
 
 import type { Metadata } from 'next';
 
@@ -26,6 +27,7 @@ export default function RootLayout({
           <RecoilRootWrapper>
             <ToastContainer />
             {children}
+            <Menu/>
           </RecoilRootWrapper>
         </QueryProvider>
       </body>
