@@ -14,3 +14,10 @@
   display: flex;
   flex-direction: column;
 }
+
+.joinBtn {
+  height: 4vh;
+  background-color: #ffa944;
+  color: #fff;
+  border-radius: 10px;
+}

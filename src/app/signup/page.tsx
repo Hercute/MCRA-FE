@@ -30,7 +30,7 @@ const SignupPage = () => {
           <label htmlFor="">닉네임</label>
           <input type="text" placeholder="3~10글자" />
         </div>
-        <button>회원가입</button>
+        <button className="joinBtn">회원가입</button>
       </form>
     </article>
   );
