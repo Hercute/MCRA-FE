@@ -1,0 +1,16 @@
+.joinArticle {
+  display: flex;
+  justify-content: center;
+}
+
+.joinForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.joinForm > div:nth-of-type(3),
+.joinForm > div:nth-of-type(4),
+.joinForm > div:nth-of-type(5) {
+  display: flex;
+  flex-direction: column;
+}
