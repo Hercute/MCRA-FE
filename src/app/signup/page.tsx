@@ -10,6 +10,7 @@ import profile5 from '@/assets/profile/profile5.png';
 import { useState } from 'react';
 
 const SignupPage = () => {
+  const profiles = [profile1, profile2, profile3, profile4, profile5];
   const [selectedImg, setSelectedImg] = useState(profile1);
 
   const handleSelectedImg = (image: StaticImageData) => {
@@ -48,11 +49,15 @@ const SignupPage = () => {
         <section className="profileImgSection">
           <Image src={selectedImg} alt="프로필 이미지" />
           <div className="imgList">
-            <Image src={profile1} alt="프로필 이미지" width={30} onClick={() => handleSelectedImg(profile1)} />
-            <Image src={profile2} alt="프로필 이미지" width={30} onClick={() => handleSelectedImg(profile2)} />
-            <Image src={profile3} alt="프로필 이미지" width={30} onClick={() => handleSelectedImg(profile3)} />
-            <Image src={profile4} alt="프로필 이미지" width={30} onClick={() => handleSelectedImg(profile4)} />
-            <Image src={profile5} alt="프로필 이미지" width={30} onClick={() => handleSelectedImg(profile5)} />
+            {profiles.map((profile, idx) => (
+              <Image
+                key={idx}
+                src={profile}
+                alt={`프로필 이미지 ${idx + 1}`}
+                width={30}
+                onClick={() => handleSelectedImg(profile)}
+              />
+            ))}
           </div>
         </section>
         <button className="joinBtn">회원가입</button>
