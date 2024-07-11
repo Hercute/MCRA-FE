@@ -31,10 +31,14 @@
   margin: auto;
 }
 
-.profileImgSection div {
+.imgList {
   display: flex;
   justify-content: space-between;
   margin-top: 2vh;
+}
+
+.imgList img {
+  cursor: pointer;
 }
 
 .joinBtn {

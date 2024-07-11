@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import './style.css';
 import profile1 from '@/assets/profile/profile1.png';
 import profile2 from '@/assets/profile/profile2.png';
@@ -11,6 +11,10 @@ import { useState } from 'react';
 
 const SignupPage = () => {
   const [selectedImg, setSelectedImg] = useState(profile1);
+
+  const handleSelectedImg = (image: StaticImageData) => {
+    setSelectedImg(image);
+  };
 
   return (
     <article className="joinArticle">
@@ -43,12 +47,12 @@ const SignupPage = () => {
         </div>
         <section className="profileImgSection">
           <Image src={selectedImg} alt="프로필 이미지" />
-          <div>
-            <Image src={profile1} alt="프로필 이미지" width={30} />
-            <Image src={profile2} alt="프로필 이미지" width={30} />
-            <Image src={profile3} alt="프로필 이미지" width={30} />
-            <Image src={profile4} alt="프로필 이미지" width={30} />
-            <Image src={profile5} alt="프로필 이미지" width={30} />
+          <div className="imgList">
+            <Image src={profile1} alt="프로필 이미지" width={30} onClick={() => handleSelectedImg(profile1)} />
+            <Image src={profile2} alt="프로필 이미지" width={30} onClick={() => handleSelectedImg(profile2)} />
+            <Image src={profile3} alt="프로필 이미지" width={30} onClick={() => handleSelectedImg(profile3)} />
+            <Image src={profile4} alt="프로필 이미지" width={30} onClick={() => handleSelectedImg(profile4)} />
+            <Image src={profile5} alt="프로필 이미지" width={30} onClick={() => handleSelectedImg(profile5)} />
           </div>
         </section>
         <button className="joinBtn">회원가입</button>
