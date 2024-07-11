@@ -28,8 +28,13 @@
 }
 
 .profileImgSection {
+  margin: auto;
+}
+
+.profileImgSection div {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-top: 2vh;
 }
 
 .joinBtn {
