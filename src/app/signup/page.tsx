@@ -47,6 +47,7 @@ const SignupPage = () => {
           <input type="text" placeholder="3~10글자" />
         </div>
         <section className="profileImgSection">
+          <p>프로필 이미지를 선택해 주세요.</p>
           <Image src={selectedImg} alt="프로필 이미지" className="selectedImg" />
           <div className="imgList">
             {profiles.map((profile, idx) => (

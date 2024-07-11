@@ -28,7 +28,10 @@
 }
 
 .profileImgSection {
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap: 2vh;
 }
 
 .selectedImg {
@@ -37,9 +40,9 @@
 }
 
 .imgList {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  margin-top: 2vh;
+  justify-content: space-around;
 }
 
 .imgList img {
