@@ -9,11 +9,20 @@ const HashTag = () => {
   const [hashTags, setHashTags] = useRecoilState(hashTagsState);
 
   const addHashTag = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    e.preventDefault();
-    const newHashTag = tagItem.trim();
-    setHashTags((prevHashTags) => {
-      return [...new Set([...prevHashTags, newHashTag])];
-    });
+    if (e.key === 'Enter' || e.key === ',' || e.key === ' ') {
+      e.preventDefault();
+      const hashTag = tagItem.trim();
+      const newHashTag = hashTag.split(',').join('');
+      if (newHashTag !== '') {
+        setHashTags((prevHashTags) => {
+          if (!prevHashTags.includes(newHashTag)) {
+            return [...prevHashTags, newHashTag];
+          }
+          return prevHashTags;
+        });
+        setTagItem('');
+      }
+    }
   };
   return (
     <section className="recipeSection">
@@ -28,6 +37,14 @@ const HashTag = () => {
           onChange={(e) => setTagItem(e.target.value)}
           onKeyUp={addHashTag}
         />
+        <div className="hashTagItem">
+          {hashTags.map((tag) => (
+            <div key={tag} className="hashTag">
+              <span>{tag}</span>
+              {/* <button onClick={() => removeHashTag(tag)}>X</button> */}
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

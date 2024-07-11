@@ -1,5 +1,4 @@
 .recipeSection {
-  background-color: aliceblue;
   border-bottom: 1px solid #704718;
 }
 .uploadDiv {
@@ -62,4 +61,26 @@
 .addPageButton svg {
   display: block;
   margin: 0 auto;
+}
+
+/* 해시태그쪽 css */
+.hashTagBox {
+  width: 100%;
+  height: 4rem;
+  border: 1px solid #ffdd9b;
+}
+.hashTagBox input {
+  margin: 0.5rem 0 0.5rem 0.5rem;
+  padding: 0.2rem;
+}
+
+.hashTagItem {
+  display: flex;
+  flex-wrap: wrap;
+}
+.hashTag {
+  padding: 0.2rem 1rem;
+  background-color: #704718;
+  margin: 0 0.5rem;
+  color: white;
 }
