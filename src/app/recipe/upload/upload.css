@@ -1,0 +1,65 @@
+.recipeSection {
+  background-color: aliceblue;
+  border-bottom: 1px solid #704718;
+}
+.uploadDiv {
+  display: flex;
+  align-items: center;
+}
+.uploadDiv span {
+  font-size: 27px;
+  margin: 0 0.5rem;
+}
+.uploadDiv .categorySelect {
+  width: 7.5rem;
+  height: 1.5rem;
+  background: #ffdd9b;
+  border-radius: 4px;
+}
+.uploadInput {
+  background-color: #fff0d2;
+}
+
+.orderFileBox {
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+  background-color: #fff0d2;
+  border-radius: 1rem;
+}
+.orderItem {
+  display: flex;
+}
+.orderFileBox svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.orderFile {
+  display: none;
+}
+.recipeExplanation {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+.orderItem textarea {
+  width: 15rem;
+  height: 4rem;
+  background-color: #fff0d2;
+}
+.addPageButton {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 1rem);
+  height: 4rem;
+  background-color: #fff0d2;
+  border-radius: 1rem;
+  border: 1px dashed #704718;
+  margin: 1.5rem 0;
+}
+.addPageButton svg {
+  display: block;
+  margin: 0 auto;
+}
