@@ -1,4 +1,10 @@
+import Image from 'next/image';
 import './style.css';
+import profile1 from '@/assets/profile/profile1.png';
+import profile2 from '@/assets/profile/profile2.png';
+import profile3 from '@/assets/profile/profile3.png';
+import profile4 from '@/assets/profile/profile4.png';
+import profile5 from '@/assets/profile/profile5.png';
 
 const SignupPage = () => {
   return (
@@ -29,6 +35,15 @@ const SignupPage = () => {
         <div>
           <label htmlFor="">닉네임</label>
           <input type="text" placeholder="3~10글자" />
+        </div>
+        <div>
+          <section>
+            <Image src={profile1} alt="프로필 이미지" width={30} />
+            <Image src={profile2} alt="프로필 이미지" width={30} />
+            <Image src={profile3} alt="프로필 이미지" width={30} />
+            <Image src={profile4} alt="프로필 이미지" width={30} />
+            <Image src={profile5} alt="프로필 이미지" width={30} />
+          </section>
         </div>
         <button className="joinBtn">회원가입</button>
       </form>
