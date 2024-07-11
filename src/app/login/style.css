@@ -1,0 +1,40 @@
+.testLogo {
+  width: 200px;
+  height: 200px;
+  background-color: #ffdd9b;
+  border-radius: 70px;
+  text-align: center;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap: 15vh;
+}
+
+.emailInput {
+  height: 4vh;
+  border: 1px solid #ffa944;
+  border-radius: 10px;
+}
+
+.btnSection {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+
+.btnSection button {
+  height: 4vh;
+  border-radius: 10px;
+}
+
+.continueBtn {
+  background-color: #ffa944;
+}
+
+.socialLoginBtn {
+  border: 1px solid #ffa944;
+}
