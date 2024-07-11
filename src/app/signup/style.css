@@ -27,6 +27,11 @@
   flex-direction: column;
 }
 
+.profileImgSection {
+  display: flex;
+  justify-content: space-around;
+}
+
 .joinBtn {
   height: 6vh;
   background-color: #ffa944;

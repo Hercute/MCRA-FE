@@ -37,7 +37,7 @@ const SignupPage = () => {
           <input type="text" placeholder="3~10글자" />
         </div>
         <div>
-          <section>
+          <section className="profileImgSection">
             <Image src={profile1} alt="프로필 이미지" width={30} />
             <Image src={profile2} alt="프로필 이미지" width={30} />
             <Image src={profile3} alt="프로필 이미지" width={30} />
