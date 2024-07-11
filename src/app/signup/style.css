@@ -31,6 +31,11 @@
   margin: auto;
 }
 
+.selectedImg {
+  border: 1px solid #704718;
+  border-radius: 15px;
+}
+
 .imgList {
   display: flex;
   justify-content: space-between;

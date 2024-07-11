@@ -47,7 +47,7 @@ const SignupPage = () => {
           <input type="text" placeholder="3~10글자" />
         </div>
         <section className="profileImgSection">
-          <Image src={selectedImg} alt="프로필 이미지" />
+          <Image src={selectedImg} alt="프로필 이미지" className="selectedImg" />
           <div className="imgList">
             {profiles.map((profile, idx) => (
               <Image
