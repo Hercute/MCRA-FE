@@ -6,6 +6,11 @@
 .joinForm {
   display: flex;
   flex-direction: column;
+  gap: 5vh;
+}
+
+.joinForm input {
+  border-bottom: 1px solid #ffdd9b;
 }
 
 .joinForm > div:nth-of-type(3),
