@@ -27,6 +27,28 @@
   flex-direction: column;
 }
 
+.profileImgSection {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap: 2vh;
+}
+
+.selectedImg {
+  border: 1px solid #704718;
+  border-radius: 15px;
+}
+
+.imgList {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.imgList img {
+  cursor: pointer;
+}
+
 .joinBtn {
   height: 6vh;
   background-color: #ffa944;
