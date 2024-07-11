@@ -1,6 +1,8 @@
 .recipeSection {
-  background-color: aliceblue;
   border-bottom: 1px solid #704718;
+}
+.recipeSection:last-of-type {
+  border-bottom: none;
 }
 .uploadDiv {
   display: flex;
@@ -62,4 +64,35 @@
 .addPageButton svg {
   display: block;
   margin: 0 auto;
+}
+
+/* 해시태그쪽 css */
+.hashTagBox {
+  width: 100%;
+  min-height: 4rem;
+  border: 1px solid #ffdd9b;
+}
+.hashTagBox input {
+  width: 90%;
+  margin: 0.5rem 0 0.5rem 0.5rem;
+  padding: 0.2rem;
+}
+
+.hashTagItem {
+  display: flex;
+  flex-wrap: wrap;
+}
+.hashTag {
+  padding: 0.2rem 1rem;
+  background-color: #fff0d2;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #704718;
+  font-weight: 500;
+  border-radius: 0.5rem;
+}
+.hashTag:hover {
+  cursor: pointer;
+  background-color: #704718;
+  color: white;
 }

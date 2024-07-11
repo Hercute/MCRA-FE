@@ -21,3 +21,8 @@ export const orderPagesState = atom<OrderPage[]>({
   key: 'orderPagesState',
   default: [{ id: 1, description: '', file: undefined, showDeleteButton: false }]
 });
+
+export const hashTagsState = atom({
+  key: 'hashTagState',
+  default: [] as string[]
+});

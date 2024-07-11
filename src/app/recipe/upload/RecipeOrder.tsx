@@ -46,14 +46,14 @@ const RecipeOrder: React.FC = () => {
         <IoBookOutline size={27} />
         <span>조리순서</span>
       </div>
-      {recipePage.map((page) => (
+      {recipePage.map((page, index) => (
         <div className="orderItem" key={page.id}>
           <div className="orderFileBox" onClick={handleDivClick}>
             <AiOutlinePicture size={36} />
             <input type="file" className="orderFile" ref={fileInputRef} onChange={handleFileChange} />
           </div>
           <div className="recipeExplanation">
-            <span>{page.id}</span>
+            <span>{index}</span>
             <textarea placeholder="레시피설명"></textarea>
           </div>
           {page.showDeleteButton && (
