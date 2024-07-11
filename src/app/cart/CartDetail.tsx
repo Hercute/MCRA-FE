@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { RiCheckboxBlankCircleFill } from 'react-icons/ri';
 import { RiCheckboxBlankCircleLine } from 'react-icons/ri';
-import CartEventBtn from './CartEventBtn';
 import { toast } from 'react-toastify';
 
 const CartDetail = () => {
@@ -121,11 +120,13 @@ const CartDetail = () => {
       {cartModal && (
         <div className="cartModalDiv">
           <div className="cartModalStyle">
-            <h3>{cartKeep}에 보관할까요?</h3>
-            <div>
-              <button onClick={cartModalCancelBtn}>취소</button>
-              <button>확인</button>
-            </div>
+            <form>
+              <h3>{cartKeep === '삭제' ? `${cartKeep} 할까요?` : `${cartKeep}에 보관할까요?`}</h3>
+              <div>
+                <button onClick={cartModalCancelBtn}>취소</button>
+                <button>확인</button>
+              </div>
+            </form>
           </div>
         </div>
       )}
