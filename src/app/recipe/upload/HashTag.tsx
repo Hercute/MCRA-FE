@@ -9,10 +9,11 @@ const HashTag = () => {
   const [hashTags, setHashTags] = useRecoilState(hashTagsState);
 
   const addHashTag = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter' || e.key === ',' || e.key === ' ') {
+    if (e.key === 'Enter' || e.key === ',') {
       e.preventDefault();
       const hashTag = tagItem.trim();
-      const newHashTag = hashTag.split(',').join('');
+      const newHashTag = hashTag.replace(/[, ]+/g, '');
+      console.log(newHashTag.length);
       if (newHashTag !== '') {
         setHashTags((prevHashTags) => {
           if (!prevHashTags.includes(newHashTag)) {
