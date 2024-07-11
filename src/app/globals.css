@@ -2,6 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'S-Core-100';
+  src: url('../../public/font/SCDream1.otf');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'S-Core-200';
+  src: url('../../public/font/SCDream2.otf');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'S-Core-300';
+  src: url('../../public/font/SCDream3.otf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'S-Core-400';
+  src: url('../../public/font/SCDream4.otf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'S-Core-500';
+  src: url('../../public/font/SCDream5.otf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'S-Core-600';
+  src: url('../../public/font/SCDream6.otf');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'S-Core-700';
+  src: url('../../public/font/SCDream7.otf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'S-Core-800';
+  src: url('../../public/font/SCDream8.otf');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'S-Core-900';
+  src: url('../../public/font/SCDream9.otf');
+  font-weight: 900;
+}
+
 html,
 body,
 div,
@@ -106,6 +160,7 @@ section {
 }
 body {
   line-height: 1;
+  font-family: 'S-Core-300';
 }
 ol,
 ul {
