@@ -1,6 +1,9 @@
 .recipeSection {
   border-bottom: 1px solid #704718;
 }
+.recipeSection:last-of-type {
+  border-bottom: none;
+}
 .uploadDiv {
   display: flex;
   align-items: center;
@@ -87,4 +90,9 @@
   color: #704718;
   font-weight: 500;
   border-radius: 0.5rem;
+}
+.hashTag:hover {
+  cursor: pointer;
+  background-color: #704718;
+  color: white;
 }

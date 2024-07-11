@@ -25,6 +25,12 @@ const HashTag = () => {
       }
     }
   };
+
+  const removeHashTag = (tag: string) => {
+    console.log(tag);
+    console.log('xxxx');
+    setHashTags((prevHashTag) => prevHashTag.filter((item) => item !== tag));
+  };
   return (
     <section className="recipeSection">
       <div className="uploadDiv">
@@ -40,9 +46,8 @@ const HashTag = () => {
         />
         <div className="hashTagItem">
           {hashTags.map((tag) => (
-            <div key={tag} className="hashTag">
+            <div key={tag} className="hashTag" onClick={() => removeHashTag(tag)}>
               <span>{tag}</span>
-              {/* <button onClick={() => removeHashTag(tag)}>X</button> */}
             </div>
           ))}
         </div>
