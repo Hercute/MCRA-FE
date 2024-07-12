@@ -1,0 +1,9 @@
+.largeCategoryList {
+  height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  text-align: center;
+}
+
+/* .largeCategoryList li */

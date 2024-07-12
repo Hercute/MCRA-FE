@@ -1,6 +1,8 @@
+import './style.css';
+
 const FridgeAddPage = () => {
   return (
-    <ul>
+    <ul className="largeCategoryList">
       <li>
         <div>img</div>
         <h4>야채</h4>
