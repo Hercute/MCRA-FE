@@ -28,6 +28,13 @@
   height: 5rem;
   background-color: #fff0d2;
   border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.uploadedImage {
+  max-width: 100%;
+  object-fit: contain;
 }
 .orderItem {
   display: flex;
