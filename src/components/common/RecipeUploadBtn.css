@@ -1,0 +1,10 @@
+.recipeUploadBtn {
+  width: 9rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffa944;
+  border-radius: 10px;
+  color: white;
+}

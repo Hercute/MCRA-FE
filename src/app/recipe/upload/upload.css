@@ -1,0 +1,98 @@
+.recipeSection {
+  border-bottom: 1px solid #704718;
+}
+.recipeSection:last-of-type {
+  border-bottom: none;
+}
+.uploadDiv {
+  display: flex;
+  align-items: center;
+}
+.uploadDiv span {
+  font-size: 27px;
+  margin: 0 0.5rem;
+}
+.uploadDiv .categorySelect {
+  width: 7.5rem;
+  height: 1.5rem;
+  background: #ffdd9b;
+  border-radius: 4px;
+}
+.uploadInput {
+  background-color: #fff0d2;
+}
+
+.orderFileBox {
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+  background-color: #fff0d2;
+  border-radius: 1rem;
+}
+.orderItem {
+  display: flex;
+}
+.orderFileBox svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.orderFile {
+  display: none;
+}
+.recipeExplanation {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+.orderItem textarea {
+  width: 15rem;
+  height: 4rem;
+  background-color: #fff0d2;
+}
+.addPageButton {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 1rem);
+  height: 4rem;
+  background-color: #fff0d2;
+  border-radius: 1rem;
+  border: 1px dashed #704718;
+  margin: 1.5rem 0;
+}
+.addPageButton svg {
+  display: block;
+  margin: 0 auto;
+}
+
+/* 해시태그쪽 css */
+.hashTagBox {
+  width: 100%;
+  min-height: 4rem;
+  border: 1px solid #ffdd9b;
+}
+.hashTagBox input {
+  width: 90%;
+  margin: 0.5rem 0 0.5rem 0.5rem;
+  padding: 0.2rem;
+}
+
+.hashTagItem {
+  display: flex;
+  flex-wrap: wrap;
+}
+.hashTag {
+  padding: 0.2rem 1rem;
+  background-color: #fff0d2;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #704718;
+  font-weight: 500;
+  border-radius: 0.5rem;
+}
+.hashTag:hover {
+  cursor: pointer;
+  background-color: #704718;
+  color: white;
+}
