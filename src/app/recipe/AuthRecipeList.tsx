@@ -20,7 +20,7 @@ const AuthRecipeList: React.FC<AuthRecipeListProps> = ({ recipes }) => {
         explanation="메추리알 운영진의 찐레시피"
         showButton={true}
         icon={FaRegThumbsUp}
-        href={`/recipe/detail-page}`}
+        href={`/recipe/detail-page`}
       />
       <div className="recipeListDiv">
         {AuthRecipes.map((recipe) => (
