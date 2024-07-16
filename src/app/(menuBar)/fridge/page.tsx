@@ -4,7 +4,7 @@ const FridgePage = () => {
   return (
     <div>
       page
-      <Link href="fridge/food">
+      <Link href="fridge/item">
         <button>냉장고 채우기</button>
       </Link>
     </div>
