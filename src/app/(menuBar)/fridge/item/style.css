@@ -3,14 +3,14 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  text-align: center;
 }
 
 .largeCategoryList li {
   position: relative;
-  display: flex;
-  justify-content: center;
-  place-items: center;
+  background-image: url(/images/button_orange.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
 }
 
 .largeCategoryList li h4 {
