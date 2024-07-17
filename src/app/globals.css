@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --warning-color: #ce3939;
+  --main-color-1: #704718;
+  --main-color-2: #ffa944;
+  --main-color-3: #ffdd9b;
+  --bg-color-1: #fff0d2;
+  --bg-color-2: #fffae7;
+  --point-color-1: #55aeff;
+  --point-color-2: #9bd5ff;
+}
+
 @font-face {
   font-family: 'SCoreDream';
   font-weight: 100;
