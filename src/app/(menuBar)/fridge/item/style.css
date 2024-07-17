@@ -13,6 +13,10 @@
   cursor: pointer;
 }
 
+.largeCategoryList li:hover {
+  background-image: url(/images/button_deep_orange.png);
+}
+
 .largeCategoryList li h4 {
   position: absolute;
   top: 50%;
