@@ -6,4 +6,16 @@
   text-align: center;
 }
 
-/* .largeCategoryList li */
+.largeCategoryList li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+
+.largeCategoryList li h4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
