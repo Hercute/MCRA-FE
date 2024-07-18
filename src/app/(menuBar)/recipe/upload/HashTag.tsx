@@ -1,7 +1,7 @@
 'use client';
 import { hashTagsState } from '@/recoil/atoms/recoilState';
 import React, { useState } from 'react';
-import { IoBookOutline } from 'react-icons/io5';
+import { FaHashtag } from 'react-icons/fa';
 import { useRecoilState } from 'recoil';
 
 const HashTag = () => {
@@ -34,7 +34,7 @@ const HashTag = () => {
   return (
     <section className="recipeSection">
       <div className="uploadDiv">
-        <IoBookOutline size={27} />
+        <FaHashtag size={27} />
         <span>해시태그</span>
       </div>
       <div className="hashTagBox">
