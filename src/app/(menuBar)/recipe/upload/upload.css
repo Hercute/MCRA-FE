@@ -1,0 +1,185 @@
+.recipeSection {
+  border-bottom: 1px solid var(--main-color-1);
+}
+.recipeSection:last-of-type {
+  border-bottom: none;
+}
+.uploadDiv {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+.uploadDiv span {
+  font-size: 27px;
+  font-weight: 700;
+  margin: 0 0.5rem;
+  color: var(--main-color-1);
+}
+.uploadDiv .categorySelect {
+  width: 7.5rem;
+  height: 1.5rem;
+  background: var(--main-color-3);
+  border-radius: 4px;
+}
+
+.uploadInput {
+  width: 100%;
+  background-color: var(--bg-color-1);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+.uploadDishName {
+  width: 50%;
+  margin-right: 15%;
+}
+.uploadTime {
+  width: 35%;
+}
+.recipeUploadImg {
+  position: relative;
+  width: 100%;
+  height: 12rem;
+  background-color: var(--bg-color-1);
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+.uploadImgBox {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.uploadImgBox svg {
+  margin: 0 auto;
+}
+.uploadImgBox span {
+  font-size: 1.2rem;
+  color: gray;
+}
+/* 재료 css */
+.ingredientBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.ingredientBox div {
+  display: flex;
+  flex-direction: column;
+}
+.ingredientBox div label {
+  margin-bottom: 0.5rem;
+}
+.ingredientBox div input {
+  width: 7rem;
+  border: 1px solid var(--main-color-3);
+  border-radius: 10px;
+}
+.ingredientBox button {
+  width: 7rem;
+  height: 25px;
+  background-color: var(--main-color-2);
+  border-radius: 10px;
+  color: white;
+}
+.ingredientList h3 {
+  margin: 1rem 0;
+}
+.ingredientList ul li {
+  display: inline-flex;
+  background-color: var(--main-color-3);
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+.orderFileBox {
+  position: relative;
+  width: 88px;
+  height: 88px;
+  background-color: #fff0d2;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.uploadedImage {
+  max-width: 100%;
+  object-fit: contain;
+}
+/* 해시태그쪽 css */
+.orderItem {
+  position: relative;
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+.orderFileBox svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.orderFile {
+  display: none;
+}
+.recipeExplanation {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+.orderItem textarea {
+  width: 15rem;
+  height: 4rem;
+  background-color: #fff0d2;
+  margin-top: 0.5rem;
+}
+.addPageButton {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 1rem);
+  height: 4rem;
+  background-color: #fff0d2;
+  border-radius: 1rem;
+  border: 1px dashed #704718;
+  margin: 1.5rem 0;
+}
+.addPageButton svg {
+  display: block;
+  margin: 0 auto;
+}
+.deleteButton {
+  position: absolute;
+  right: 1rem;
+}
+/* 해시태그쪽 css */
+.hashTagBox {
+  width: 100%;
+  min-height: 4rem;
+  border: 1px solid #ffdd9b;
+}
+.hashTagBox input {
+  width: 90%;
+  margin: 0.5rem 0 0.5rem 0.5rem;
+  padding: 0.2rem;
+}
+
+.hashTagItem {
+  display: flex;
+  flex-wrap: wrap;
+}
+.hashTag {
+  padding: 0.2rem 1rem;
+  background-color: #fff0d2;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #704718;
+  font-weight: 500;
+  border-radius: 0.5rem;
+}
+.hashTag:hover {
+  cursor: pointer;
+  background-color: #704718;
+  color: white;
+}
