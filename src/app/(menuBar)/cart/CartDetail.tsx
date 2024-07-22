@@ -5,6 +5,8 @@ import { AiOutlinePlus } from 'react-icons/ai';
 import { RiCheckboxBlankCircleFill } from 'react-icons/ri';
 import { RiCheckboxBlankCircleLine } from 'react-icons/ri';
 import { toast } from 'react-toastify';
+import buttonImage from '@/assets/button/button.png';
+import Image from 'next/image';
 
 const CartDetail = () => {
   const [checkEvent, setCheckEvent] = useState(false);
@@ -12,7 +14,7 @@ const CartDetail = () => {
   const [cartModal, setCartModal] = useState(false);
   const [cartKeep, setCartKeep] = useState('');
 
-  const cartNum = [{ title: '사과' }, { title: '딸기' }, { title: '수박' }];
+  const cartNum = 0;
 
   const cartEventBtnArray = [{ title: '실온' }, { title: '냉장' }, { title: '냉동' }, { title: '삭제' }];
   const cartZero = 0;
@@ -107,15 +109,18 @@ const CartDetail = () => {
           )}
         </div>
       ) : (
-        <>
-          <div className="cartDetailLinkDiv">
-            <Link className="cartPlusLink" href="/cart/plus">
-              <AiOutlinePlus className="cartPlusIcon" />
-              <span>재료추가</span>
-            </Link>
-          </div>
+        <div className="cartDetailLinkDiv">
+          <Link href="/cart/plus">
+            <div className="cartBtnImg">
+              <Image src={buttonImage} alt="buttonImage" />
+              <div className="cartBtnIcon">
+                <AiOutlinePlus className="cartPlusIcon" />
+                <span>재료추가</span>
+              </div>
+            </div>
+          </Link>
           <p>장바구니에 재료가 없습니다.</p>
-        </>
+        </div>
       )}
       {cartModal && (
         <div className="cartModalDiv">
