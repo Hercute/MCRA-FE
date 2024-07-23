@@ -4,10 +4,10 @@ import './RecipeDetail.css';
 
 const RecipeDetailPage = () => {
   return (
-    <>
+    <main>
       <RecipeInfo />
       <Ingredient />
-    </>
+    </main>
   );
 };
 

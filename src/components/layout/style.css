@@ -5,4 +5,41 @@
   justify-content: center;
   gap: 20px;
   border-top: 1px solid #ffa944;
+  background-color: #ffffff;
+}
+
+.headerSection {
+  height: 8vh;
+  border-bottom: 1px solid;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  background-color: #ffffff;
+}
+
+.headerTitle {
+  color: var(--main-color-2);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.headerSearch {
+  width: 14rem;
+  height: 1.5rem;
+  border-radius: 7px;
+  background-color: rgb(224, 224, 224);
+  padding: 0 0.8rem;
+  font-size: 0.7rem;
+}
+
+.headerChatIcon {
+  padding: 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+.headerSearchIcon {
+  position: absolute;
+  right: 8px;
+  top: 4px;
+  color: rgb(163, 163, 163);
 }

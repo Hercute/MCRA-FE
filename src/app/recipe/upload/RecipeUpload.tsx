@@ -2,6 +2,7 @@
 import { recipeState } from '@/recoil/atoms/recoilState';
 import React from 'react';
 import { IoBookOutline } from 'react-icons/io5';
+import { AiOutlinePicture } from 'react-icons/ai';
 import { useRecoilState } from 'recoil';
 
 const RecipeUpload = () => {
@@ -28,6 +29,12 @@ const RecipeUpload = () => {
           <option value="other">기타</option>
         </select>
       </div>
+      <div className="recipeUploadImg">
+        <div className="uploadImgBox">
+          <AiOutlinePicture size={108} color="gray" />
+          <span>대표 이미지를 등록해 주세요</span>
+        </div>
+      </div>
       <input
         type="text"
         name="title"
@@ -48,7 +55,7 @@ const RecipeUpload = () => {
         name="dishName"
         value={recipe.dishName}
         onChange={handleRecipeChange}
-        className="uploadInput"
+        className="uploadInput uploadDishName"
         placeholder="요리이름"
       />
       <input
@@ -56,7 +63,7 @@ const RecipeUpload = () => {
         name="cookingTime"
         value={recipe.cookingTime}
         onChange={handleRecipeChange}
-        className="uploadInput"
+        className="uploadInput uploadTime"
         placeholder="조리시간"
       />
     </section>
