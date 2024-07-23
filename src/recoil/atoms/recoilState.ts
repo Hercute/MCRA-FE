@@ -1,13 +1,15 @@
 import { atom } from 'recoil';
-import { OrderPage } from '@/types/recipe';
+import { OrderPage, Recipe } from '@/types/recipe';
 
-export const recipeState = atom({
+export const recipeState = atom<Recipe>({
   key: 'recipeState',
   default: {
     title: '',
     description: '',
     dishName: '',
     cookingTime: '',
+    mainImg: '',
+    category: '',
     ingredients: [
       {
         name: '',
