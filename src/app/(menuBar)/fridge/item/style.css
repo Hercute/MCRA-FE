@@ -1,25 +1,36 @@
+.largeCategorySection {
+  height: 90vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+
+  color: var(--main-color-1);
+}
+
 .largeCategoryList {
-  height: 80vh;
+  margin: 0 auto;
+  width: 50%;
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
 }
 
-.largeCategoryList li {
-  position: relative;
+.largeCategoryList li div {
+  /* position: relative; */
+  height: 80%;
   background-image: url(/images/button_orange.png);
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
 }
 
-.largeCategoryList li:hover {
+.largeCategoryList li div:hover {
   background-image: url(/images/button_deep_orange.png);
 }
 
-.largeCategoryList li h4 {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%, 0);
+.largeCategorySection h3 {
+  font-size: 20px;
+  font-weight: 500;
 }
