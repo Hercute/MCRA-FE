@@ -3,9 +3,11 @@ import React, { ChangeEvent } from 'react';
 import { useRecoilState } from 'recoil';
 import { orderPagesState } from '@/recoil/atoms/recoilState';
 import { OrderPage } from '@/types/recipe';
+import { IoMdClose } from 'react-icons/io';
 import { AiOutlinePicture } from 'react-icons/ai';
 import { GoPlusCircle } from 'react-icons/go';
 import Image from 'next/image';
+import { PiCookingPot } from 'react-icons/pi';
 
 const RecipeComponent: React.FC = () => {
   const [recipePages, setRecipePages] = useRecoilState<OrderPage[]>(orderPagesState);
@@ -43,7 +45,11 @@ const RecipeComponent: React.FC = () => {
   };
 
   return (
-    <div>
+    <section className="recipeSection">
+      <div className="uploadDiv">
+        <PiCookingPot size={27} />
+        <span>조리순서</span>
+      </div>
       {recipePages.map((page, index) => (
         <div className="orderItem" key={page.id}>
           <div className="orderFileBox" onClick={() => handleDivClick(page.id)}>
@@ -70,16 +76,16 @@ const RecipeComponent: React.FC = () => {
             ></textarea>
           </div>
           {page.showDeleteButton && (
-            <button className="deleteButton" onClick={() => handleDeleteOrder(page.id)}>
-              X
-            </button>
+            <span className="deleteButton" onClick={() => handleDeleteOrder(page.id)}>
+              <IoMdClose size={20} color="red" />
+            </span>
           )}
         </div>
       ))}
       <div className="addPageButton" onClick={handleAddPage}>
         <GoPlusCircle size={24} />
       </div>
-    </div>
+    </section>
   );
 };
 

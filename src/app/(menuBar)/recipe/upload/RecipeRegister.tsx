@@ -15,6 +15,8 @@ const RecipeRegister = () => {
       description: '',
       dishName: '',
       cookingTime: '',
+      mainImg: '',
+      category: '',
       ingredients: []
     });
     setRecipePage([{ id: 1, description: '', file: undefined, showDeleteButton: false }]);

@@ -1,11 +1,16 @@
 'use client';
 import { recipeState } from '@/recoil/atoms/recoilState';
-import React from 'react';
+import React, { useRef } from 'react';
 import { IoBookOutline } from 'react-icons/io5';
+import { AiOutlinePicture } from 'react-icons/ai';
+import { IoMdClose } from 'react-icons/io';
 import { useRecoilState } from 'recoil';
+import Image from 'next/image';
+import { Recipe } from '@/types/recipe';
 
 const RecipeUpload = () => {
-  const [recipe, setRecipe] = useRecoilState(recipeState);
+  const [recipe, setRecipe] = useRecoilState<Recipe>(recipeState);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleRecipeChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -13,6 +18,26 @@ const RecipeUpload = () => {
       const newState = { ...prev, [name]: value };
       return newState;
     });
+  };
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const imgUrl = URL.createObjectURL(file);
+      setRecipe((prev) => ({
+        ...prev,
+        mainImg: imgUrl
+      }));
+    }
+  };
+  const triggerFileInput = (): void => {
+    fileInputRef.current?.click();
+  };
+  const handleFileDelete = (e: React.MouseEvent<SVGElement, MouseEvent>): void => {
+    e.stopPropagation();
+    setRecipe((prev) => ({
+      ...prev,
+      mainImg: ''
+    }));
   };
   return (
     <section className="recipeSection">
@@ -27,6 +52,22 @@ const RecipeUpload = () => {
           <option value="dessert">디저트</option>
           <option value="other">기타</option>
         </select>
+      </div>
+      <div className="recipeUploadImg">
+        <div className="uploadImgBox" onClick={triggerFileInput}>
+          {recipe.mainImg ? (
+            <>
+              <Image src={recipe.mainImg} alt={recipe.description} layout="fill" objectFit="contain" />
+              <IoMdClose onClick={handleFileDelete} className="closeImg" color="red" size={28} />
+            </>
+          ) : (
+            <>
+              <AiOutlinePicture size={108} color="gray" />
+              <span>대표 이미지를 등록해 주세요</span>
+            </>
+          )}
+          <input type="file" style={{ display: 'none' }} onChange={handleFileUpload} ref={fileInputRef} />
+        </div>
       </div>
       <input
         type="text"
@@ -48,7 +89,7 @@ const RecipeUpload = () => {
         name="dishName"
         value={recipe.dishName}
         onChange={handleRecipeChange}
-        className="uploadInput"
+        className="uploadInput uploadDishName"
         placeholder="요리이름"
       />
       <input
@@ -56,7 +97,7 @@ const RecipeUpload = () => {
         name="cookingTime"
         value={recipe.cookingTime}
         onChange={handleRecipeChange}
-        className="uploadInput"
+        className="uploadInput uploadTime"
         placeholder="조리시간"
       />
     </section>
