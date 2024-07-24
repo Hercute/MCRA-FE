@@ -8,7 +8,7 @@ import Menu from '@/components/layout/Menu';
 export default function Home() {
   return (
     <main style={{ width: '375px', border: '1px solid #999999', margin: '0 auto' }}>
-        <MainHeader />
+      <MainHeader />
       <section
         style={{
           display: 'flex',
@@ -28,7 +28,7 @@ export default function Home() {
           냉장고
         </Link>
       </section>
-      <Menu/>
+      <Menu />
     </main>
   );
 }
