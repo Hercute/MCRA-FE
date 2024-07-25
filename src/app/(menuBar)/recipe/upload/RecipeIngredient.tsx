@@ -9,19 +9,19 @@ const RecipeIngredient = () => {
   const [recipe, setRecipe] = useRecoilState(recipeState);
   const [ingredientName, setIngredientName] = useState('');
   const [ingredientCount, setIngredientCount] = useState('');
-  console.log(recipe.ingredients.length);
+  console.log(recipe.ingredientMapList.length);
   const handleIngredientAdd = () => {
     if (ingredientName.trim() === '' || ingredientCount.trim() === '') {
       alert('재료 이름과 개수를 모두 입력해주세요.');
       return;
     }
 
-    const newIngredient = { name: ingredientName, count: ingredientCount };
-    const updatedIngredients = [...recipe.ingredients, newIngredient];
+    const newIngredient = { name: ingredientName, quantity: ingredientCount };
+    const updatedIngredients = [...recipe.ingredientMapList, newIngredient];
 
     setRecipe((prev) => ({
       ...prev,
-      ingredients: updatedIngredients
+      ingredientMapList: updatedIngredients
     }));
     // 입력 필드 초기화
     setIngredientName('');
@@ -58,14 +58,14 @@ const RecipeIngredient = () => {
       </div>
       <div className="ingredientList">
         <h3>등록된 재료</h3>
-        {recipe.ingredients.filter((ingredient) => ingredient.name && ingredient.count).length > 0 ? (
+        {recipe.ingredientMapList.filter((ingredient) => ingredient.name && ingredient.quantity).length > 0 ? (
           <ul>
-            {recipe.ingredients
-              .filter((ingredient) => ingredient.name && ingredient.count)
+            {recipe.ingredientMapList
+              .filter((ingredient) => ingredient.name && ingredient.quantity)
               .map((ingredient, index) => (
                 <li key={index}>
                   <span>
-                    {ingredient.name} {ingredient.count}
+                    {ingredient.name} {ingredient.quantity}
                   </span>
                   <IoMdClose size={16} color="red" />
                 </li>

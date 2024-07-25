@@ -15,7 +15,7 @@ const RecipeComponent: React.FC = () => {
   const handleAddPage = () => {
     const newPage: OrderPage = {
       id: Date.now(),
-      description: '',
+      comment: '',
       file: undefined,
       filePreview: undefined,
       showDeleteButton: true
@@ -32,8 +32,8 @@ const RecipeComponent: React.FC = () => {
     }
   };
 
-  const handleDescription = (pageId: number, description: string) => {
-    setRecipePages(recipePages.map((page) => (page.id === pageId ? { ...page, description } : page)));
+  const handleComment = (pageId: number, comment: string) => {
+    setRecipePages(recipePages.map((page) => (page.id === pageId ? { ...page, comment } : page)));
   };
 
   const handleDeleteOrder = (pageId: number) => {
@@ -54,7 +54,7 @@ const RecipeComponent: React.FC = () => {
         <div className="orderItem" key={page.id}>
           <div className="orderFileBox" onClick={() => handleDivClick(page.id)}>
             {page.filePreview ? (
-              <Image src={page.filePreview} alt={page.description} className="uploadedImage" width={80} height={80} />
+              <Image src={page.filePreview} alt={page.comment} className="uploadedImage" width={80} height={80} />
             ) : (
               <AiOutlinePicture size={36} />
             )}
@@ -69,9 +69,9 @@ const RecipeComponent: React.FC = () => {
           <div className="recipeExplanation">
             <span>{index + 1}</span>
             <textarea
-              name="description"
-              value={page.description}
-              onChange={(e) => handleDescription(page.id, e.target.value)}
+              name="comment"
+              value={page.comment}
+              onChange={(e) => handleComment(page.id, e.target.value)}
               placeholder="레시피설명"
             ></textarea>
           </div>

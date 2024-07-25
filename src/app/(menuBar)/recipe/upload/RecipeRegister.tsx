@@ -12,14 +12,14 @@ const RecipeRegister = () => {
     alert('레시피가 성공적으로 저장되었습니다.');
     setRecipe({
       title: '',
-      description: '',
-      dishName: '',
-      cookingTime: '',
-      mainImg: '',
+      comment: '',
+      name: '',
+      time: '',
+      image: '',
       category: '',
-      ingredients: []
+      ingredientMapList: []
     });
-    setRecipePage([{ id: 1, description: '', file: undefined, showDeleteButton: false }]);
+    setRecipePage([{ id: 1, comment: '', file: undefined, showDeleteButton: false }]);
     setHashTags([]);
 
     console.log('Final Recipe State:', recipe);

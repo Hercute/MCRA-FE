@@ -5,15 +5,15 @@ export const recipeState = atom<Recipe>({
   key: 'recipeState',
   default: {
     title: '',
-    description: '',
-    dishName: '',
-    cookingTime: '',
-    mainImg: '',
+    comment: '',
+    name: '',
+    time: '',
+    image: '',
     category: '',
-    ingredients: [
+    ingredientMapList: [
       {
         name: '',
-        count: ''
+        quantity: ''
       }
     ]
   }
@@ -21,7 +21,7 @@ export const recipeState = atom<Recipe>({
 
 export const orderPagesState = atom<OrderPage[]>({
   key: 'orderPagesState',
-  default: [{ id: 1, description: '', file: undefined, showDeleteButton: false }]
+  default: [{ id: 1, comment: '', file: undefined, showDeleteButton: false }]
 });
 
 export const hashTagsState = atom({
