@@ -25,7 +25,7 @@ const RecipeUpload = () => {
       const imgUrl = URL.createObjectURL(file);
       setRecipe((prev) => ({
         ...prev,
-        mainImg: imgUrl
+        image: imgUrl
       }));
     }
   };
@@ -36,7 +36,7 @@ const RecipeUpload = () => {
     e.stopPropagation();
     setRecipe((prev) => ({
       ...prev,
-      mainImg: ''
+      image: ''
     }));
   };
   return (
@@ -55,9 +55,9 @@ const RecipeUpload = () => {
       </div>
       <div className="recipeUploadImg">
         <div className="uploadImgBox" onClick={triggerFileInput}>
-          {recipe.mainImg ? (
+          {recipe.image ? (
             <>
-              <Image src={recipe.mainImg} alt={recipe.description} layout="fill" objectFit="contain" />
+              <Image src={recipe.image} alt={recipe.comment} layout="fill" objectFit="contain" />
               <IoMdClose onClick={handleFileDelete} className="closeImg" color="red" size={28} />
             </>
           ) : (
@@ -78,24 +78,24 @@ const RecipeUpload = () => {
         placeholder="제목을 작성해주세요"
       />
       <textarea
-        name="description"
-        value={recipe.description}
+        name="comment"
+        value={recipe.comment}
         onChange={handleRecipeChange}
         className="uploadInput"
         placeholder="요리 설명을 작성해 주세요"
       ></textarea>
       <input
         type="text"
-        name="dishName"
-        value={recipe.dishName}
+        name="name"
+        value={recipe.name}
         onChange={handleRecipeChange}
         className="uploadInput uploadDishName"
         placeholder="요리이름"
       />
       <input
         type="text"
-        name="cookingTime"
-        value={recipe.cookingTime}
+        name="time"
+        value={recipe.time}
         onChange={handleRecipeChange}
         className="uploadInput uploadTime"
         placeholder="조리시간"
